@@ -12,6 +12,5 @@ spec:
   - port: 8080
     nodePort: 30001
     targetPort: 80
-    app: TCP
   selector:
     app: multiarmbandit
