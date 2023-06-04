@@ -1,16 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: multiarmbandit
+  name: multiarmbandit-lb
 spec:
 # ipFamilyPolicy: PreferDualStack
 # ipFamilies:
 # - IPv4
 # - IPv6
-  type: NodePort
+  type: LoadBalancer
   ports:
-  - port: 8080
-    nodePort: 30001
+  - port: 80
     targetPort: 80
   selector:
     app: multiarmbandit
